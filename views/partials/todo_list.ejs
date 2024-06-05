@@ -1,0 +1,39 @@
+<%if(todos.length> 0) {%>
+    <% todos.forEach(todo=> {%>
+        <div class="card task">
+            <h2 class="task-title">
+                <%=todo.title%>
+            </h2>
+            <span class="task-desc">
+                <%=todo.desc%>
+            </span>
+            <div>
+                <span style="color: #fffc;">
+                    <%= todo.createdAt.toDateString()%>
+                </span>
+                <div class="task-action">
+                    <%if(!todo.status) {%>
+                        <form action="/complete" method="POST">
+                            <input type="hidden" name="taskId" value="<%=todo._id%>" />
+                            <button class="task-complete-btn">Complete</button>
+                        </form>
+                        <%}else {%>
+                            <form action="/undo" method="POST">
+                                <input type="hidden" name="taskId" value="<%=todo._id%>" />
+                                <button class="task-undo-btn">Undo</button>
+                            </form>
+                            <%}%>
+                                <form action="/delete" method="POST">
+                                    <input type="hidden" name="taskId" value="<%=todo._id%>" />
+                                    <button class="task-delte-btn">Delete</button>
+                                </form>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+
+            <%} else { %>
+                <div class="card">
+                    No Todos Here
+                </div>
+                <% }%>

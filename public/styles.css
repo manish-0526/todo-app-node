@@ -1,0 +1,149 @@
+* {
+    --bg-color: #333;
+    --fg-color: #fff;
+    --surface-color: #444;
+    --primary-color: #2a86f0;
+}
+
+body {
+    color: var(--fg-color);
+    background: var(--bg-color);
+}
+
+h1 {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+main {
+    margin: auto;
+    max-width: 480px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    color: var(--fg-color);
+}
+
+button:hover {
+    filter: brightness(90%);
+}
+
+.card {
+    padding: 12px;
+    background: var(--surface-color);
+}
+
+.add-task-btn {
+    min-width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    background: var(--primary-color);
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+}
+
+.task>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+form {
+    margin: 0px;
+}
+
+.task-action {
+    display: flex;
+}
+
+.task-title {
+    margin: 0.4rem 0rem;
+}
+
+.task-complete-btn {
+    margin: 0rem 0.5rem;
+    background: #00aa69;
+}
+
+.task-undo-btn {
+    margin: 0rem 0.5rem;
+    background: var(--primary-color);
+}
+
+.task-delte-btn {
+    background: #ca0000;
+}
+
+.create-task {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-create-btn {
+    padding: 0.7rem;
+    background: var(--primary-color);
+}
+
+input[type=text],
+textarea {
+    height: 2rem;
+    outline: none;
+    margin: 0.5rem 0rem;
+    padding: 0.5rem 0.5rem;
+    background: #f5f6f7;
+    border-radius: 10px;
+    border: 1px solid #ffff;
+    min-width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
+    transition: border 0.5s;
+    min-height: 1rem;
+}
+
+input[type=text]:focus,
+input[type=text]:hover {
+    border: 1px solid var(--primary-color);
+}
+
+textarea {
+    height: auto;
+}
+
+textarea:focus,
+textarea:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.tabbar {
+    padding: 2px;
+    margin-bottom: 2px;
+    height: 2.5rem;
+    background: var(--surface-color);
+}
+
+.tab-link {
+    height: 2.5rem;
+    border-radius: 0;
+    background-color: inherit;
+    margin: 0px;
+}
+
+.tab-link.active {
+    background-color: var(--bg-color);
+}
+
+.tab-view {
+    display: none;
+}
+
+.tab-view.active {
+    display: inherit;
+}

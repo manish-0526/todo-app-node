@@ -1,0 +1,6 @@
+# server
+PORT = 3000
+
+# mongodb
+MONGO_CONNECTION_STRING = # mongo connection string 
+MONGO_DB_NAME = # mongo db for app

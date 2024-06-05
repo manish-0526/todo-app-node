@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        TODO app
+    </title>
+
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>TODOS</h1>
+
+        <div class="tabbar">
+            <button class="tab-link" for="add-todo">Add</button>
+            <button class="tab-link active" for="todos">Todos</button>
+            <button class="tab-link" for="completed-todos">Completed</button>
+        </div>
+
+        <div style="margin-bottom: 2px;">
+            <div id="add-todo" class="tab-view">
+                <%- include("./partials/create_todo_form.ejs") %>
+            </div>
+            <div id="todos" class="tab-view active">
+                <%- include("./partials/todo_list.ejs", {"todos": todos }) %>
+            </div>
+
+            <div id="completed-todos" class="tab-view">
+                <%- include("./partials/todo_list.ejs", {"todos": completed }) %>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

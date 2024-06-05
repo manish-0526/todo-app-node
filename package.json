@@ -1,0 +1,21 @@
+{
+  "name": "todo-app-node",
+  "version": "1.0.0",
+  "description": "Todo App using nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manishgupta0/todo-app-node.git"
+  },
+  "author": "Manish",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  }
+}
